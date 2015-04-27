@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GOnDO</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_start_scan">Start Scan</string>
+    <string name="menu_stop_scan">Stop Scan</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_reconnect">Reconnect</string>
+    <string name="title_activity_monitor">MonitorActivity</string>
+
+    <string name="connectionstatus_connect">Connect</string>
+    <string name="connectionstatus_disconnect">Disconnect</string>
+
+</resources>

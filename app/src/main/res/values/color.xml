@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="action_bar_color">#436EEE</color>
+    <color name="item_text_color">#000011</color>
+    <color name="main_bt_device_list_divider_color">#DCDCDC</color>
+
+    <color name="temp_value_color">#0000EE</color>
+
+</resources>

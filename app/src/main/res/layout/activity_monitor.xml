@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:keepScreenOn="true"
+    tools:context="com.gondo.activity.MonitorActivity">
+
+    <TextView
+        android:id="@+id/monitor_connect_status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="status"/>
+
+    <TextView
+        android:id="@+id/monitor_device_name_text"
+        android:text="devicename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/monitor_index_title_text"
+        android:text="index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="45dp"
+        android:layout_below="@id/monitor_device_name_text"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/monitor_index_title2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/monitor_index_title_text"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/monitor_device_name_text"
+        android:visibility="invisible"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/monitor_index_value_unit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/monitor_index_title_text"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="60dp"
+        android:textSize="40dp"
+        android:text="unit"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/monitor_index_value_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/monitor_index_title_text"
+        android:layout_toLeftOf="@id/monitor_index_value_unit_text"
+        android:layout_marginRight="10dp"
+        android:textSize="100dp"
+        android:text="value"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/monitor_index_value_minus_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/monitor_index_title_text"
+        android:layout_toLeftOf="@id/monitor_index_value_text"
+        android:layout_marginRight="10dp"
+        android:textSize="75dp"
+        android:text="-"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/monitor_temp_value_unit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/monitor_index_value_unit_text"
+        android:layout_marginTop="25dp"
+        android:textSize="30dp"
+        android:text="unit"
+        android:textColor="@color/temp_value_color"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/monitor_temp_value_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/monitor_index_value_unit_text"
+        android:layout_toLeftOf="@id/monitor_temp_value_unit_text"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/temp_value_color"
+        android:text="temp"
+        android:textSize="40dp"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>
