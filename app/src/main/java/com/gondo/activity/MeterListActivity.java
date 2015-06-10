@@ -163,16 +163,24 @@ public class MeterListActivity extends Activity {
     private BluetoothAdapter.LeScanCallback mLeScanCallback = new BluetoothAdapter.LeScanCallback() {
         @Override
         public void onLeScan(BluetoothDevice device, int rssi, byte[] scanRecord) {
-
+            if (device == null){
+                Log.i(TAG, "device is null");
+                return;
+            }
             if (mBluetoothDevices.size() > 0) {
                 int searchResult = mBluetoothDevices.indexOf(device);
-                Log.i(TAG, "scan result1");
+                Log.i(TAG, "scan result1 " + searchResult);
                 if (searchResult < 0) {
                     Log.i(TAG, "scan result");
                     if (device.getName().substring(0, 5).equals(getResources().getString(R.string.app_name))) {
                         mBluetoothDevices.add(device);
                         mBluetoothDeviceListAdapter.updateBluetoothDevices(mBluetoothDevices);
-                        mBluetoothDeviceListAdapter.notifyDataSetChanged();
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                mBluetoothDeviceListAdapter.notifyDataSetChanged();
+                            }
+                        });
                     }
                 }
             } else {
@@ -180,7 +188,13 @@ public class MeterListActivity extends Activity {
                     Log.i(TAG, "scan result2");
                     mBluetoothDevices.add(device);
                     mBluetoothDeviceListAdapter.updateBluetoothDevices(mBluetoothDevices);
-                    mBluetoothDeviceListAdapter.notifyDataSetChanged();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            mBluetoothDeviceListAdapter.notifyDataSetChanged();
+                        }
+                    });
+
                 }
             }
         }

@@ -53,6 +53,7 @@ public class MonitorActivity extends Activity {
         super.onResume();
         mBluetoothDevice = getIntent().getExtras().getParcelable(Def.IntentIndex.BLE_DEVICE);
         mBluetoothDevice.connectGatt(getApplicationContext(), true , mBluetoothGattCallback);
+        Log.d(TAG, mBluetoothDevice.getName());
         initValue();
     }
 
