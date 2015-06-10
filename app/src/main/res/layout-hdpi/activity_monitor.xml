@@ -72,7 +72,7 @@
         android:layout_below="@id/monitor_index_title_text"
         android:layout_toLeftOf="@id/monitor_index_value_text"
         android:layout_marginRight="10dp"
-        android:textSize="75dp"
+        android:textSize="160dp"
         android:text="-"
         android:visibility="invisible"/>
 
